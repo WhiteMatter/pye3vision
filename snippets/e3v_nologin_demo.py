@@ -77,7 +77,7 @@ print(">> Choosing: " + anno + '\n')
 segment = "2m"
 
 # Bind to camera
-requests.post(watchtowerurl+'/api/cameras/action', data = {'Id': camid, 'Action': 'BIND', 'apitoken': apit}, verify=False)
+requests.post(watchtowerurl+'/api/cameras/action', data = {'Id': camid, 'Action': 'BIND'}, verify=False)
 
 # Connect to a camera
 requests.post(watchtowerurl+'/api/cameras/action', data = {'Id': camid, 'Action': 'CONNECT', 'Iface': interface, 'Config': resolution, 'Codec': codec, 'Annotation': anno, 'Segtime': segment}, verify=False)
